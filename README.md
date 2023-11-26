@@ -1,7 +1,7 @@
 # Safe-SD: Safe and Harmless Stable Diffusion with Image Watermarks Injection
 [CODE](https://github.com/AnonymousPony/safe-sd)
 
-[****]<br/>
+[Safe-SD Architecture]<br/>
 
 <p align="center">
 <img src=assets/safe-sd.png />
@@ -10,17 +10,20 @@
 ## Experiments
 
 ### Pixel-wise Difference
+- To verify the image generation quality with watermarking, and to qualitatively assess the fidelity of the decoded watermarks, we conduct the qualitative experiments. 
 <p align="center">
 <img src=assets/difference.png />
 </p>
 
 ### Watermarking Encryption
+- We perform a study on the impact of watermarking frequency λ on image synthesis.
 <p align="center">
 <img src=assets/lambda.png />
 </p>
-- We perform a study on the impact of watermarking frequency λ on image synthesis.
+
 
 ### Watermarking vs Image Synthesis
+- To further explore the impact of the weighting hyper-parameter γ on the training of dual-objective decoders, for trading off image synthesis and watermark extraction in a unified first-stage-model, we perform this study on hyper-parameter.
 <p align="center">
 <img src=assets/gamma.png />
 </p>
