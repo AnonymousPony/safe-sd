@@ -2,6 +2,8 @@
 [CODE](https://github.com/AnonymousPony/safe-sd)
 
 ## Safe-SD Architecture
+- Safe-SD mainly contains two stages: 1) Pre-train graphic watermark injector/extrac179 tor (Sec.3.1) and 2) Fine-tune latent λ-encryption diffuser with prompt triggering (Sec.3.2). The former aims to train a modified SD’s first-stage-model (with a dual variational au182 toencoder) to obtain a unified graphic watermark injection and extraction network, while the latter serves as a latent diffuser with an elaborately designed temporal λ-encryption algorithm for more secure and traceable watermark injection.
+- Moreover, we introduce a novel prompt triggering mechanism to enable adaptive watermark injection for facilitating copyright protection and generative traceability.
 
 <p align="center">
 <img src=assets/safe-sd.png />
