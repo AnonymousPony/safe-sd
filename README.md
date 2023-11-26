@@ -1,8 +1,8 @@
 # Safe-SD: Safe and Harmless Stable Diffusion with Image Watermarks Injection
-[code](https://github.com/AnonymousPony/safe-sd) | [BibTeX](#bibtex)
+[CODE](https://github.com/AnonymousPony/safe-sd)
 
 <p align="center">
-<img src=assets/difference.pdf />
+<img src=assets/intro.png />
 </p>
 
 
@@ -10,19 +10,35 @@
 [****]<br/>
 
 <p align="center">
-<img src=assets/safe-sd.pdf />
+<img src=assets/safe-sd.png />
+</p>
+
+## Models
+### Forward Noising
+<p align="center">
+<img src=assets/forward_noise.png />
+</p>
+
+### Inverted Denoising
+<p align="center">
+<img src=assets/invert_denoise.png />
 </p>
 
 ## Experiments
 
+### Pixel-wise Difference
+<p align="center">
+<img src=assets/difference.png />
+</p>
+
 ### Watermarking Encryption
 <p align="center">
-<img src=assets/lambda.pdf />
+<img src=assets/lambda.png />
 </p>
 - Inference code and model weights to run our [retrieval-augmented diffusion models](https://arxiv.org/abs/2204.11824) are now available. See [this section](#retrieval-augmented-diffusion-models).
 ### Watermarking vs Image Synthesis
 <p align="center">
-<img src=assets/hyper-parameter.pdf />
+<img src=assets/gamma.png />
 </p>
 - Thanks to [Katherine Crowson](https://github.com/crowsonkb), classifier-free guidance received a ~2x speedup and the [PLMS sampler](https://arxiv.org/abs/2202.09778) is available. See also [this PR](https://github.com/CompVis/latent-diffusion/pull/51).
 
@@ -326,30 +342,6 @@ and [https://github.com/lucidrains/denoising-diffusion-pytorch](https://github.c
 Thanks for open-sourcing!
 
 - The implementation of the transformer encoder is from [x-transformers](https://github.com/lucidrains/x-transformers) by [lucidrains](https://github.com/lucidrains?tab=repositories). 
-
-
-## BibTeX
-
-```
-@misc{rombach2021highresolution,
-      title={High-Resolution Image Synthesis with Latent Diffusion Models}, 
-      author={Robin Rombach and Andreas Blattmann and Dominik Lorenz and Patrick Esser and Björn Ommer},
-      year={2021},
-      eprint={2112.10752},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
-}
-
-@misc{https://doi.org/10.48550/arxiv.2204.11824,
-  doi = {10.48550/ARXIV.2204.11824},
-  url = {https://arxiv.org/abs/2204.11824},
-  author = {Blattmann, Andreas and Rombach, Robin and Oktay, Kaan and Ommer, Björn},
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  title = {Retrieval-Augmented Diffusion Models},
-  publisher = {arXiv},
-  year = {2022},  
-  copyright = {arXiv.org perpetual, non-exclusive license}
-}
 
 
 ```
