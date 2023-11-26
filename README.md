@@ -1,7 +1,7 @@
 # Safe-SD: Safe and Harmless Stable Diffusion with Image Watermarks Injection
 [CODE](https://github.com/AnonymousPony/safe-sd)
 
-[Safe-SD Architecture]<br/>
+## Safe-SD Architecture
 
 <p align="center">
 <img src=assets/safe-sd.png />
