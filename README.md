@@ -1,23 +1,29 @@
-# Latent Diffusion Models
-[arXiv](https://arxiv.org/abs/2112.10752) | [BibTeX](#bibtex)
+# Safe-SD: Safe and Harmless Stable Diffusion with Image Watermarks Injection
+[code](https://github.com/AnonymousPony/safe-sd) | [BibTeX](#bibtex)
 
 <p align="center">
-<img src=assets/results.gif />
+<img src=assets/difference.pdf />
 </p>
 
 
 
-[**Safe-SD: Safe and Harmless Stable Diffusion with Image Watermarks Injection**]<br/>
+[****]<br/>
 
 <p align="center">
-<img src=assets/modelfigure.png />
+<img src=assets/safe-sd.pdf />
 </p>
 
-## News
+## Experiments
 
-### July 2022
+### Watermarking Encryption
+<p align="center">
+<img src=assets/lambda.pdf />
+</p>
 - Inference code and model weights to run our [retrieval-augmented diffusion models](https://arxiv.org/abs/2204.11824) are now available. See [this section](#retrieval-augmented-diffusion-models).
-### April 2022
+### Watermarking vs Image Synthesis
+<p align="center">
+<img src=assets/hyper-parameter.pdf />
+</p>
 - Thanks to [Katherine Crowson](https://github.com/crowsonkb), classifier-free guidance received a ~2x speedup and the [PLMS sampler](https://arxiv.org/abs/2202.09778) is available. See also [this PR](https://github.com/CompVis/latent-diffusion/pull/51).
 
 - Our 1.45B [latent diffusion LAION model](#text-to-image) was integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try out the Web Demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/multimodalart/latentdiffusion)
@@ -27,12 +33,12 @@
   - A class-conditional model on ImageNet, achieving a FID of 3.6 when using [classifier-free guidance](https://openreview.net/pdf?id=qw8AKxfYbI) Available via a [colab notebook](https://colab.research.google.com/github/CompVis/latent-diffusion/blob/main/scripts/latent_imagenet_diffusion.ipynb) [![][colab]][colab-cin].
   
 ## Requirements
-A suitable [conda](https://conda.io/) environment named `ldm` can be created
+A suitable [conda](https://conda.io/) environment named `safe-sd` can be created
 and activated with:
 
 ```
 conda env create -f environment.yaml
-conda activate ldm
+conda activate safe-sd
 ```
 
 # Pretrained Models
@@ -101,11 +107,6 @@ The database can be changed via the cmd parameter ``--database`` which can be `[
 For using `--database openimages`, the above script (`scripts/train_searcher.py`) must be executed before.
 Due to their relatively small size, the artbench datasetbases are best suited for creating more abstract concepts and do not work well for detailed text control. 
 
-
-#### Coming Soon
-- better models
-- more resolutions
-- image-to-image retrieval
 
 ## Text-to-Image
 ![text2img-figure](assets/txt2img-preview.png) 
