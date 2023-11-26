@@ -1,12 +1,6 @@
 # Safe-SD: Safe and Harmless Stable Diffusion with Image Watermarks Injection
 [CODE](https://github.com/AnonymousPony/safe-sd)
 
-<p align="center">
-<img src=assets/intro.png />
-</p>
-
-
-
 [****]<br/>
 
 <p align="center">
@@ -17,11 +11,12 @@
 ### Forward Noising
 <p align="center">
 <img src=assets/forward_noise.png />
+<img src=assets/invert_denoise.png />
 </p>
 
 ### Inverted Denoising
 <p align="center">
-<img src=assets/invert_denoise.png />
+
 </p>
 
 ## Experiments
