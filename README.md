@@ -7,18 +7,6 @@
 <img src=assets/safe-sd.png />
 </p>
 
-## Models
-### Forward Noising
-<p align="center">
-<img src=assets/forward_noise.png />
-<img src=assets/invert_denoise.png />
-</p>
-
-### Inverted Denoising
-<p align="center">
-
-</p>
-
 ## Experiments
 
 ### Pixel-wise Difference
