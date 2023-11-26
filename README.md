@@ -18,7 +18,7 @@
 <p align="center">
 <img src=assets/lambda.png />
 </p>
-- Inference code and model weights to run our [retrieval-augmented diffusion models](https://arxiv.org/abs/2204.11824) are now available. See [this section](#retrieval-augmented-diffusion-models).
+- We perform a study on the impact of watermarking frequency λ on image synthesis.
 
 ### Watermarking vs Image Synthesis
 <p align="center">
