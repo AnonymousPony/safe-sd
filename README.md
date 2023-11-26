@@ -137,6 +137,3 @@ Thanks for open-sourcing!
 - The implementation of the transformer encoder is from [x-transformers](https://github.com/lucidrains/x-transformers) by [lucidrains](https://github.com/lucidrains?tab=repositories). 
 
 
-```
-
-
