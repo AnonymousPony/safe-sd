@@ -24,12 +24,11 @@
 <p align="center">
 <img src=assets/gamma.png />
 </p>
-- Thanks to [Katherine Crowson](https://github.com/crowsonkb), classifier-free guidance received a ~2x speedup and the [PLMS sampler](https://arxiv.org/abs/2202.09778) is available. See also [this PR](https://github.com/CompVis/latent-diffusion/pull/51).
 
-- Our 1.45B [latent diffusion LAION model](#text-to-image) was integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try out the Web Demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/multimodalart/latentdiffusion)
+
 
 - More pre-trained LDMs are available: 
-  - A 1.45B [model](#text-to-image) trained on the [LAION-400M](https://arxiv.org/abs/2111.02114) database.
+  - A 1.45B [model](#text-to-image) trained on the LAION-400M database.
   - A class-conditional model on ImageNet, achieving a FID of 3.6 when using [classifier-free guidance](https://openreview.net/pdf?id=qw8AKxfYbI) Available via a [colab notebook](https://colab.research.google.com/github/CompVis/latent-diffusion/blob/main/scripts/latent_imagenet_diffusion.ipynb) [![][colab]][colab-cin].
   
 ## Requirements
@@ -39,17 +38,6 @@ and activated with:
 ```
 conda env create -f environment.yaml
 conda activate safe-sd
-```
-
-# Pretrained Models
-A general list of all available checkpoints is available in via our [model zoo](#model-zoo).
-If you use any of these models in your work, we are always happy to receive a [citation](#bibtex).
-
-
-example during training, we can directly take a CLIP text embedding of a given prompt and condition on it.
-Run this mode via
-```
-python scripts/knn2img.py  --prompt "a happy bear reading a newspaper, oil on canvas"
 ```
 
 ## Text-to-Image
@@ -132,33 +120,10 @@ CUDA_VISIBLE_DEVICES=<GPU_ID> python main.py --base configs/latent-diffusion/<co
 ``` 
 
 where ``<config_spec>`` is one of {`celebahq-ldm-vq-4`(f=4, VQ-reg. autoencoder, spatial size 64x64x3),`ffhq-ldm-vq-4`(f=4, VQ-reg. autoencoder, spatial size 64x64x3),
-`lsun_bedrooms-ldm-vq-4`(f=4, VQ-reg. autoencoder, spatial size 64x64x3),
 `lsun_churches-ldm-vq-4`(f=8, KL-reg. autoencoder, spatial size 32x32x4),`cin-ldm-vq-8`(f=8, VQ-reg. autoencoder, spatial size 32x32x4)}.
 
-# Model Zoo 
 
-## Pretrained Autoencoding Models
-![rec2](assets/reconstruction2.png)                                |
-
-
-### Get the models
-
-The LDMs listed above can jointly be downloaded and extracted via
-
-```shell script
-bash scripts/download_models.sh
-```
-
-The models can then be found in `models/ldm/<model_spec>`.
-
-
-
-## Coming Soon...
-
-* More inference scripts for conditional LDMs.
-* In the meantime, you can play with our colab notebook https://colab.research.google.com/drive/1xqzUi2iXQXDqXBHQGP9Mqt2YrYW6cx-J?usp=sharing
-
-## Comments 
+## Acknowledgement
 
 - Our codebase for the diffusion models builds heavily on [OpenAI's ADM codebase](https://github.com/openai/guided-diffusion)
 and [https://github.com/lucidrains/denoising-diffusion-pytorch](https://github.com/lucidrains/denoising-diffusion-pytorch). 
