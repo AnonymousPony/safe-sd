@@ -7,13 +7,7 @@
 
 
 
-[**High-Resolution Image Synthesis with Latent Diffusion Models**](https://arxiv.org/abs/2112.10752)<br/>
-[Robin Rombach](https://github.com/rromb)\*,
-[Andreas Blattmann](https://github.com/ablattmann)\*,
-[Dominik Lorenz](https://github.com/qp-qp)\,
-[Patrick Esser](https://github.com/pesser),
-[Björn Ommer](https://hci.iwr.uni-heidelberg.de/Staff/bommer)<br/>
-\* equal contribution
+[**Safe-SD: Safe and Harmless Stable Diffusion with Image Watermarks Injection**]<br/>
 
 <p align="center">
 <img src=assets/modelfigure.png />
