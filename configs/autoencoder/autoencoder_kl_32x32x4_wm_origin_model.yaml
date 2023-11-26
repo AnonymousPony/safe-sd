@@ -1,0 +1,59 @@
+model:
+  base_learning_rate: 4.5e-6
+  target: ldm.models.autoencoder.AutoencoderKL
+  params:
+    monitor: "val/rec_loss"
+    embed_dim: 4
+    ckpt_path: xxx/model.ckpt
+    use_wm: True
+    wm_key: wm_img
+    lossconfig:
+      target: ldm.modules.losses.LPIPSWithDiscriminator
+      params:
+        disc_start: 50001
+        kl_weight: 0.000001
+        disc_weight: 0.5
+
+    ddconfig:
+      double_z: True
+      z_channels: 4
+      resolution: 256
+      in_channels: 3
+      out_ch: 3
+      ch: 128
+      ch_mult: [ 1,2,4,4 ]  # num_down = len(ch_mult)-1
+      num_res_blocks: 2
+      attn_resolutions: [ ]
+      dropout: 0.0
+
+data:
+  target: main.DataModuleFromConfig
+  params:
+    batch_size: 8
+    num_workers: 10
+    wrap: True
+    train:
+      target: ldm.data.lsun_wm.LSUNChurchesTrain
+      params:
+        size: 256
+        wm_dir: xxx/Logo/Logo-imgs
+        # degradation: pil_nearest
+    validation:
+      target: ldm.data.lsun_wm.LSUNChurchesValidation
+      params:
+        size: 256
+        wm_dir: xxx/Logo/val
+        # degradation: pil_nearest
+
+lightning:
+  callbacks:
+    image_logger:
+      target: main.ImageLogger
+      params:
+        batch_frequency: 1000
+        max_images: 8
+        increase_log_steps: True
+
+  trainer:
+    benchmark: True
+    accumulate_grad_batches: 2
